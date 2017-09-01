@@ -8,6 +8,7 @@ import Input from './src/Input'
 import Label from './src/Label'
 import Select from './src/Select'
 import Switch from './src/Switch'
+import MaskedInput from './src/MaskedInput'
 import Theme from './src/Theme'
 
 export {
@@ -21,5 +22,6 @@ export {
   Label,
   Select,
   Switch,
+  MaskedInput,
   Theme
 }

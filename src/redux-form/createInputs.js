@@ -6,7 +6,8 @@ import {
 import {
   Input as InputRenderer,
   Select as SelectRenderer,
-  Switch as SwitchRenderer
+  Switch as SwitchRenderer,
+  MaskedInput as MaskedInputRenderer
 } from '../../index'
 
 const createInputs = inputCreator => {
@@ -37,10 +38,16 @@ const createInputs = inputCreator => {
   }
   const Switch = inputCreator('Switch', renderSwitch, SwitchRenderer.PropTypes, SwitchRenderer.defaultProps)
 
+  const renderMaskedInput = ({input: {onChange, value}}) => {
+    return <MaskedInputRenderer onChangeText={onChange} value={value}/>
+  }
+  const MaskedInput = inputCreator('MaskedInput', renderMaskedInput, MaskedInputRenderer.PropTypes, MaskedInputRenderer.defaultProps)
+
   return {
     Input,
     Select,
-    Switch
+    Switch,
+    MaskedInput
   }
 }
 
