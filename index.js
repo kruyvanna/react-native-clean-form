@@ -9,6 +9,7 @@ import Label from './src/Label'
 import Select from './src/Select'
 import Switch from './src/Switch'
 import MaskedInput from './src/MaskedInput'
+import Radio from './src/Radio'
 import Theme from './src/Theme'
 
 export {
@@ -23,5 +24,6 @@ export {
   Select,
   Switch,
   MaskedInput,
+  Radio,
   Theme
 }

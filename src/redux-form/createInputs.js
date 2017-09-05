@@ -7,7 +7,8 @@ import {
   Input as InputRenderer,
   Select as SelectRenderer,
   Switch as SwitchRenderer,
-  MaskedInput as MaskedInputRenderer
+  MaskedInput as MaskedInputRenderer,
+  Radio as RadioRenderer
 } from '../../index'
 
 const createInputs = inputCreator => {
@@ -44,11 +45,18 @@ const createInputs = inputCreator => {
   }
   const MaskedInput = inputCreator('MaskedInput', renderMaskedInput, MaskedInputRenderer.PropTypes, MaskedInputRenderer.defaultProps)
 
+  const renderRadio = (props) => {
+    const {input: {onChange, value}} = props
+    return <RadioRenderer initial={value} onPress={onChange} {...props}/>
+  }
+  const Radio = inputCreator('Radio', renderRadio, RadioRenderer.PropTypes, RadioRenderer.defaultProps)
+
   return {
     Input,
     Select,
     Switch,
-    MaskedInput
+    MaskedInput,
+    Radio
   }
 }
 

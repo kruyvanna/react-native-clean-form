@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import defaultTheme from './Theme'
 import { TextInputMask } from 'react-native-masked-text'
 import styled from 'styled-components/native'

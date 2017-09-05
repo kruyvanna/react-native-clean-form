@@ -6,12 +6,14 @@ const {
   Input,
   Select,
   Switch,
-  MaskedInput
+  MaskedInput,
+  Radio
 } = createInputs(createInputCreator(Field))
 
 export {
   Input,
   Select,
   Switch,
-  MaskedInput
+  MaskedInput,
+  Radio
 }

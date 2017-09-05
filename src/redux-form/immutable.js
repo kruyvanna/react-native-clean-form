@@ -5,11 +5,15 @@ import { Field } from 'redux-form/immutable'
 const {
   Input,
   Select,
-  Switch
+  Switch,
+  MaskedInput,
+  Radio
 } = createInputs(createInputCreator(Field))
 
 export {
   Input,
   Select,
-  Switch
+  Switch,
+  MaskedInput,
+  Radio
 }
