@@ -38,8 +38,9 @@ const createInputs = inputCreator => {
   }
   const Switch = inputCreator('Switch', renderSwitch, SwitchRenderer.PropTypes, SwitchRenderer.defaultProps)
 
-  const renderMaskedInput = ({input: {onChange, value}}) => {
-    return <MaskedInputRenderer onChangeText={onChange} value={value}/>
+  const renderMaskedInput = (props) => {
+    const {input: {onChange, value}} = props
+    return <MaskedInputRenderer onChangeText={onChange} value={value} {...props}/>
   }
   const MaskedInput = inputCreator('MaskedInput', renderMaskedInput, MaskedInputRenderer.PropTypes, MaskedInputRenderer.defaultProps)
 
