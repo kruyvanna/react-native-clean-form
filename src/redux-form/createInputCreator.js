@@ -16,12 +16,12 @@ ErrorMessage.defaultProps = {
 }
 
 const render = renderComponent => props => {
-  const { border, input : { onChange, ...restInput }, label, inlineLabel, theme, meta: { touched, error } } = props
+  const { border, input : { onChange, ...restInput }, label, inlineLabel, theme, meta: { asyncValidating, touched, error } } = props
 
   return (
     <View>
       <FormGroup border={border} inlineLabel={inlineLabel} theme={theme} error={touched && !!error} {...props} >
-        <Label theme={theme}>{ label }</Label>
+        <Label theme={theme}>{ label } {asyncValidating && 'CHECKING'}</Label>
         { renderComponent(props) }
       </FormGroup>
       { touched && error && <ErrorMessage theme={theme}>{ error }</ErrorMessage> }
