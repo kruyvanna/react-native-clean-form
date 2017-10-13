@@ -15,6 +15,7 @@ class Form extends Component {
   }
 
   onLayout(e) {
+    console.log('onLayout', e)
     this.setState({
       height: e.nativeEvent.layout.height
     })
@@ -26,7 +27,7 @@ class Form extends Component {
     return (
       <View style={{ flex: 1 }} onLayout={this.onLayout}>
         <ScrollView contentContainerStyle={{ minHeight: this.state.height }}>
-            { children }
+          {children}
         </ScrollView>
       </View>
     )
